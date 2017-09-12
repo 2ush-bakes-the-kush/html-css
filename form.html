@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" href="favicon1.ico">
+		<title>Information Form</title>
+		<link href="https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <style>
+		body{
+			background:white;
+			}
+			.btn{
+				position:fixed;
+				left:45%;
+				font-size:20px;
+				box-shadow:6px 6px 2px;
+			}
+			.frm{
+				width:100%;
+				text-align:center;
+				position:fixed;
+				top:10%;
+				bottom:10%;
+				left:38%;
+				right:10%;
+			}
+			.vid{
+				 position:fixed;
+				 left:0;
+				 right:0;
+				 top:0;
+				 bottom:0;
+				 width:100%;
+			}
+	   </style>
+  </head>
+  <body>
+  <div >
+	<video width="100%" height="100%"  autoplay loop class="vid">
+		<source src="splash.mp4" type="video/mp4">
+	</video>
+   </div>
+		<form class="form-horizontal frm" method="post" action="display.php" >
+		<h4>
+			<div class="form-group"></br>
+				<div class="col-sm-3">
+					<input type="text" class="form-control" id="name" placeholder="Enter your Name" name="name">
+				</div>
+			</div>
+			<div class="form-group"></br>
+				<div class="col-sm-3"> 
+					<input type="date" class="form-control" id="birth" placeholder="Enter your Date of Birth" name="birth">
+				</div>
+			</div>
+			<div class="form-group"></br>
+				<div class="col-sm-3">
+					<input type="text" class="form-control" id="branch" placeholder="Enter your Email ID" name="branch">
+				</div>
+			</div>
+			<div class="form-group"></br>
+				<div class="col-sm-3"> 
+					<input type="number" class="form-control" id="uid" placeholder="Enter your Unique Student Id" name="uid">
+				</div>
+			</div>
+			<div class="form-group"></br>
+				<div class="col-sm-3"> 
+					<input type="number" class="form-control" id="year" placeholder="Enter your Year of Study" name="year">
+				</div>
+			</div>
+			<div class="form-group"></br>
+				<div class="col-sm-3"> 
+					<input type="email" class="form-control" id="email" placeholder="Enter your Email address" name="email">
+				</div>
+			</div>
+			<div class="form-group"></br>
+				<div class="col-sm-3"> 
+					<input type="number" class="form-control" id="phone" placeholder="Enter your Mobile Number" name="phone">
+				</div>
+			</div>
+			
+			<div class="form-group"> 
+				<div class="col-sm-offset-1 col-sm-10" style="text-align:center">	
+					<button type="submit" class="btn btn-default btn" name="btn-submit" value="submit">Submit</button>
+				</div>
+			</div>
+			</h4>
+		</form>
+  </body>
+ </html>
+ 

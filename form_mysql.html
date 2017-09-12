@@ -1,0 +1,171 @@
+<?php
+	error_reporting(E_ERROR | E_PARSE);
+	$conn= mysqli_connect("localhost","root","","mist");
+	if(!$conn) {
+		die("Connection failed: ".mysqli_connect_error());
+	}
+	if($_REQUEST['submited']=='Submit'){
+		$name=$_POST['name'];
+		$number=$_POST['contact'];
+		$email=$_POST['email'];
+		$sql="INSERT INTO Form(Name, Conatct, Email) VALUES ('$name','$number','$email')";
+		$res = mysqli_query($conn,$sql);
+		$val="&nbspYour information is stored.&nbsp";
+	}
+?>
+<head>
+	<title>mySQL input</title>
+	<link rel="shortcut icon" href="favicon3.ico">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lobster|Bangers" rel="stylesheet">
+	<style>
+		body{
+			background:url("https://s-media-cache-ak0.pinimg.com/originals/f6/ce/39/f6ce396110dedfff5b85d810f42ad91d.jpg") center;
+		}
+		
+			.btn {
+				padding: 10px;
+				font-size: 24px;
+				text-align: center;
+				cursor: pointer;
+				color: #fff;
+				background-color: #008CBA;;
+				border: 3px solid white;
+				border-radius: 15px;
+				box-shadow:4px 4px 1px #000 !important;			 
+			}
+				
+			.btn:hover{
+				 padding: 10px;
+				 font-size: 40px;
+				 text-align: center;
+				 cursor: pointer;
+				 outline: none;
+				 color: #fff;
+				 text-shadow: 4px 4px 4px #000;
+				 border: none;
+				 background-color:#2fc557;
+				 border-radius: 15px;
+				 box-shadow:8px 8px 1px #000;
+				 border: 3px solid white;
+				 transition:all 1s ease;
+				-webkit-transition:all 1s ease;
+				-moz-transition:all 1s ease;
+				-o-transition:all 1s ease;				
+				}
+			
+			form{
+				font-family: 'Lobster', cursive !important;
+				text-shadow: 4px 4px 2px #000 !important;
+				font-size:25px;
+				position:fixed;
+				top:25%;
+				color:#fff !important;
+				bottom:10%;
+				left:10%;
+				right:10%;
+			}
+			.typewriter h1 {
+			    overflow: hidden; /* Ensures the content is not revealed until the animation */
+			    white-space: nowrap; /* Keeps the content on a single line */
+			    letter-spacing:3px;
+			    animation: 
+				typing 4s steps(100, end),
+				blink-caret 1.95s step-end infinite;
+				animation-iteration-count:infinite;
+			}
+
+			/* The typing effect */
+			@keyframes typing {
+			    from { width:0%  }
+			    to { width: 100% }
+			}
+
+			@keyframes blink-caret {
+			    from, to { border-color: transparent }
+			    100% { border-color: black; }
+			}
+			
+			#quote{
+				position:fixed;
+				top:80%;
+				left:25%;
+				color:black;
+				font-family: 'Bangers', cursive !important;
+				font-size:60px;
+				height:100px;
+				width:100%;
+				text-shadow: 4px 4px 1px yellow;
+				border:5px solid black;
+				border-radius:25px;
+			}
+			.success{
+				position:absolute;
+				top:-10;
+				color:black;
+				z-index:99;
+				background:yellow;
+				margin:10px;
+				left:-10;
+				border:4px solid black;
+				border-radius:25px;
+				
+			}
+			.img{
+				height:100px;
+				width:100px;
+				border: 4px solid black;
+				border-radius:50%;
+				margin-left:46%;
+				
+			}
+ 
+			.head{
+				border:4px solid black;
+				border-radius:25px;
+				background:yellow;
+				font-family: 'Bangers', cursive !important;
+				text-align:center;
+				margin-left:35%;
+				margin-right:35%;
+				color:#000;
+			}
+
+
+	</style>
+</head>
+<body>
+	<div >
+		<img src="meh.jpg" alt="Profile" class="img">
+	</div>
+	<h2 class="head">By Tushar Raj Pradhan</h2>
+	<div class="typewriter">
+		<h1 id="quote" >Please Enter your details.</br>
+		<div class="success" > <?php echo($val) ?> </div></h1>
+	</div>
+	<form class="form-horizontal form" method="post" action="form_mysql.php" >
+		<div class="form-group"></br>
+			<label class="control-label col-sm-5" for="name">Name:</label>
+				<div class="col-sm-3">
+					<input type="text" class="form-control" id="name" placeholder="Enter your Name" name="name">
+				</div>
+		</div>
+		<div class="form-group"></br>
+			<label class="control-label col-sm-5" for="birth">Contact:</label>
+				 <div class="col-sm-3"> 
+					<input type="text" class="form-control" id="contact" placeholder="Enter your Contact Number" name="contact">
+				 </div>
+		</div>
+		<div class="form-group"></br>
+			<label class="control-label col-sm-5" for="branch">Email:</label>
+				<div class="col-sm-3">
+					<input type="email" class="form-control" id="email" placeholder="Enter your Branch" name="email">
+				</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-1 col-sm-10" style="text-align:center">
+				<input type="submit" name="submited" onclick="fun()"  class="btn btn-default" id="btn_gen"  value="Submit">
+			</div>
+		</div>
+	</form>
+</body>

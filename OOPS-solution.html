@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="favicon5.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>OOPS Assignment Solutions</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Homenaje|Lobster" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+	#logo{
+		float:center;
+	}
+	a{
+		font-size:20.5px;
+		font-family: 'Homenaje', sans-serif;
+		color:#337;
+	}
+		a:hover{
+		color:white;
+	}
+	.animate-bottom {
+		  position: relative;
+		  -webkit-animation-name: animatebottom;
+		  -webkit-animation-duration: 1s;
+		  animation-name: animatebottom;
+		  animation-duration: 1s
+	}
+	@-webkit-keyframes animatebottom {
+		  from { bottom:-100px; opacity:0 } 
+		  to { bottom:0px; opacity:1 }
+	}
+	@keyframes animatebottom { 
+		  from{ bottom:-100px; opacity:0 } 
+		  to{ bottom:0; opacity:1 }
+	}
+	#myDiv {
+		  display: none;
+		  margin-left:5%;
+		  margin-right:5%;
+	}
+	#loader {
+		width:100%;
+		height:device-height;
+		text-align: center;
+	 }
+	h1{
+		text-align:center;
+		position:fixed;
+		bottom:0;
+		width:100%;
+		color:#d62f27; 
+		font-family: 'Lobster', cursive;
+		font-size:50px;
+	}
+	h2{
+		color:#d62f27; 
+		font-family: 'Lobster', cursive;
+		font-size:50px;
+	}
+	body{
+		background: #a6d8c5 ;
+	}
+	</style>
+</head>
+<body onload="myFunction()" style="margin:0;">
+	<div id="loader">
+		<img src="https://cdn.dribbble.com/users/550761/screenshots/1773241/untitled-5.gif">
+		<h1>Yours Answers are loading...</h1>
+	</div>
+	<div id="myDiv" class="animate-bottom">
+		<img src="http://logos-download.com/wp-content/uploads/2016/10/Java_logo_icon.png" height="200" width="400" id="logo">
+			<h2>-->OOPS Assignment Answers</h2>
+		<div id="que">
+			<a href="EmployeeMain.java">
+				1.	Create a class Employee with data members: employee Id, employee name, basic salary. Create a constructor to initialize employee object, computeNetSalary  method to compute the net salary of an employee and display method to display employee details.
+			</a>
+			</br></br>
+			<a href="TimeMain.java">
+				2.	Create a Time class that has separate integer member data for hours, minutes and seconds. One constructor should initialize these data to zero and another should initialize to fixed value. A method should display time in hh:mm:ss format. Finally a method should add 2 objects of time passed as argument.
+			</a>
+			</br></br>
+			<a href="StudentMain.java">
+				3.	Create a base class Student having data members: registration number and name. Using this class, create a subclass UGStudent having these data members: sessionalMarks, assignmentMarks and endSemMarks. The UGStudent class also has setUGStudent method to initialize the object, computePerformance method to compute grade based on the total marks and Display method to print the student details. 
+			</a>
+			</br></br>
+			<a href="four.java">
+				4.	Explain the following concepts with suitable examples:</br>
+				i. Type conversion in java</br>
+				ii. Various Operators in Java</br>
+				iii. Labelled break and continue statements</br>
+				iv. Method Overloading And Method Overriding</br>
+			</a>
+			</br>
+			<a href="five.java">
+				5.Write the output for the following code snippet with suitable justification/s.
+			</a>
+			<h1>All The Best👍</h1>
+		</div>
+	</div>
+</body>
+<script>
+	var myVar;
+	function myFunction() {
+	    myVar = setTimeout(showPage, 8000);
+	}
+	function showPage() {
+	  document.getElementById("loader").style.display = "none";
+	  document.getElementById("myDiv").style.display = "block";
+	}
+</script>
+</html>
