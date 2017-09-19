@@ -1,0 +1,71 @@
+body {
+	width:100%;
+	overflow:hidden;
+	background:black;
+} 
+.logo{
+	position:absolute;
+	top:0%;
+	left:2%;
+}
+h1 {
+	background-image: url('GHAR.jpg');
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-animation-name: masked-animation;
+	-webkit-animation-duration: 20s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	position: absolute;
+	margin: auto;
+	text-align: center;
+	top: 2%;
+	width: 100%;
+	font-size: 100px;
+	opacity: 1;
+	font-family: 'Monoton', cursive;
+}
+
+@-webkit-keyframes masked-animation {
+	  0% {
+		background-position: left bottom;
+	  }
+	  100% {
+		background-position: right bottom;
+	  }
+}
+
+#miss{
+	position:absolute;
+	top:5%;
+	right:5%;
+}
+
+			
+			@keyframes typing {
+			    from { width:0%  }
+			    to { width: 100% }
+			}
+
+			@keyframes blink-caret {
+			    from, to { border-color: transparent }
+			    100% { border-color: black; }
+			}
+			.typewriter h2 {
+			    overflow: hidden;
+			    white-space: nowrap;
+			    letter-spacing:5px;
+			    animation: 
+				typing 4s steps(100, end),
+				blink-caret 1.95s step-end infinite;
+				animation-iteration-count:infinite;
+				font-family: 'Lobster', cursive;
+				font-size:60px;
+				position:absolute;
+				top:18%;
+				left:35%;
+				color:#0dbbe4;
+			}
+			
