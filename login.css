@@ -1,0 +1,191 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background:black;
+  overflow:hidden;
+}
+.registration-form {
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  top: 30%;
+  background: transparent;
+   box-shadow: 0px 0px 3000px #999;
+}
+.registration-form header {
+  position: relative;
+  z-index: 10;
+  background: white;
+  padding: 20px 40px;
+}
+.registration-form header h1 {
+  font-weight: 13000;
+  letter-spacing: 1.5px;
+  color: #000;
+  font-size: 23px;
+  margin: 0;
+}
+.registration-form header p {
+  word-spacing: 0px;
+  color: #777;
+  font-size: 17px;
+  margin: 0;
+  margin-top: 5px;
+}
+.registration-form{
+  background:white;
+  border-radius:30px;
+}
+.form-control {
+	font-size:20px;
+	height:50px;
+}
+.frm{
+	font-size:30px;
+	background:#3ca2ec;
+	color:black;
+}
+.locked{
+color:white;
+position:absolute;
+top:10%;
+width:100%;
+text-align:center;
+font-size:100px;
+}
+.lo{
+
+	-webkit-transition: all 2s ease;  
+  -moz-transition: all 2s ease;  
+  -o-transition: all 2s ease;  
+  -ms-transition: all 2s ease;  
+  transition: all 2s ease;
+}
+.loo{
+	display:none;
+}
+.dp{
+	display:none;
+	-webkit-transition: all 2s ease;  
+  -moz-transition: all 2s ease;  
+  -o-transition: all 2s ease;  
+  -ms-transition: all 2s ease;  
+  transition: all 2s ease;
+}
+.dpp{
+display:inline;
+}
+nav.sidebar-menu-collapsed {
+  width: 50px;
+}
+
+nav.sidebar-menu-expanded {
+  width: 150px;
+}
+
+nav.sidebar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  background: #3ca2ec;
+  color: white;
+  padding: 20px 10px;
+}
+
+nav.sidebar ul {
+  margin: 0;
+  padding: 0;
+  margin-top: 60px;
+}
+
+nav.sidebar ul li {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+nav.sidebar ul li a.expandable {
+  outline: 0;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+nav.sidebar ul li a.expandable:hover {
+  color: #bbbbbb;
+}
+
+nav.sidebar ul li a.expandable span.expanded-element {
+  margin-left: 2px;
+  display: none;
+  font-size: 11px;
+  position: relative;
+  bottom: 2px;
+}
+
+nav.sidebar ul li.active {
+  background: none repeat scroll 0 0 black;
+  border-radius: 4px;
+  text-align: center;
+  margin-left: -4px;
+  padding: 4px;
+}
+
+nav.sidebar ul li.active a.expandable {
+  color: white !important;
+}
+
+nav.sidebar ul li.active a.expandable:hover {
+  color: white !important;
+}
+.button {
+  border-radius: 4px;
+  background-color: #3ca2ec;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  position:relative;
+  left:90px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+nav.sidebar a#justify-icon {
+  outline: 0;
+  color: white;
+  font-size: 24px;
+  font-style: normal;
+}
+.expanded-element{
+	font-size:15px!important;
+}
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

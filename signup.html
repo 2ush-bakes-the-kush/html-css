@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Smoked'17</title>
+	 <script type="text/javascript" src="processing.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/63bd011956.js"></script>
+	<link href="signup.css" rel="stylesheet">
+	</head>
+	<body>
+	<div >
+	<video width="100%" height="100%"  autoplay loop class="vid">
+		<source src="bg.mp4" type="video/mp4">
+	</video>
+   </div>
+	<div class="locked">
+		<span ><i class="fa fa-lock lo" aria-hidden="true"></i></span>
+		<span ><i class="fa fa-unlock-alt dp" aria-hidden="true"></i></span></h1>
+	</div>
+<div class="registration-form">
+  <header>
+    <h1>SIGN UP</h1>
+    <p>Welcome to the world of SMOKED</p>
+  </header>
+  <form>
+    <div class="input-section name-section">
+      <input class="name" type="text" placeholder="Enter Your Name" autocomplete="off"/>
+      <div class="animated-button"><span class="icon-name"><i class="fa fa-user-circle" aria-hidden="true"></i></span><span class="next-button name"><i class="fa fa-arrow-up"></i></span></div>
+    </div>
+    <div class="input-section roll-section folded">
+      <input class="roll" type="text" placeholder="Enter Your Resgistration Number "/>
+      <div class="animated-button"><span class="icon-roll"><i class="fa fa-id-card-o" aria-hidden="true"></i></span><span class="next-button roll"><i class="fa fa-arrow-up"></i></span></div>
+    </div>
+	<div class="input-section college-section folded">
+      <input class="college" type="text" placeholder="Enter Your College "/>
+      <div class="animated-button"><span class="icon-college"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span><span class="next-button college"><i class="fa fa-arrow-up"></i></span></div>
+    </div>
+	<div class="input-section uname-section folded">
+      <input class="uname" type="text" placeholder="Enter Your Username "/>
+      <div class="animated-button"><span class="icon-uname"><i class="fa fa-user-secret" aria-hidden="true"></i></span><span class="next-button uname"><i class="fa fa-arrow-up"></i></span></div>
+    </div>
+	<div class="input-section email-section folded">
+      <input class="email" type="email" placeholder="Enter Your Email "/>
+      <div class="animated-button"><span class="icon-email"><i class="fa fa-envelope-o" aria-hidden="true"></i></span><span class="next-button email"><i class="fa fa-arrow-up"></i></span></div>
+    </div>
+    <div class="input-section password-section folded">
+      <input class="password" type="password" placeholder="Enter your Password"/>
+      <div class="animated-button"><span class="icon-repeat-lock"><i class="fa fa-key" aria-hidden="true"></i></span><span class="next-button password"><i class="fa fa-paper-plane"></i></span></div>
+    </div>
+    <div class="success"> 
+      <p>ACCOUNT CREATED</p>
+    </div>
+  </form>
+</div>
+    <nav class='sidebar sidebar-menu-collapsed'>
+      <a href='#' id='justify-icon'>
+        <span class='glyphicon glyphicon-align-justify'></span>
+      </a>
+      <ul>
+        <li>
+          <a class='expandable' href='#' title='Home'>
+            <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+            <span class='expanded-element'>Home</span>
+          </a>
+        </li>
+        <li>
+          <a class='expandable' href='#' title='Play Game'>
+            <i class="fa fa-gamepad fa-lg" aria-hidden="true"></i>
+            <span class='expanded-element'>Play Game</span>
+          </a>
+        </li>
+        <li class='active'>
+          <a class='expandable' href='signup.html' title='Sign Up'>
+           <i class="fa fa-user-plus fa-lg" aria-hidden="true"></i>
+            <span class='expanded-element'>Sign Up</span>
+          </a>
+        </li>
+        <li>
+          <a class='expandable' href='login.html' title='Login'>
+           <i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>
+            <span class='expanded-element'>Login</span>
+          </a>
+        </li>
+		<li>
+          <a class='expandable' href='#' title='Rules'>
+           <i class="fa fa-list-alt fa-lg" aria-hidden="true"></i>
+            <span class='expanded-element'>Rules</span>
+          </a>
+        </li>
+		<li>
+          <a class='expandable' href='#' title='Leader Board'>
+          <i class="fa fa-trophy fa-lg" aria-hidden="true"></i>
+            <span class='expanded-element'>Leader Board</span>
+          </a>
+        </li>
+		<li>
+          <a class='expandable' href='#' title='Team'>
+           <i class="fa fa-users fa-lg" aria-hidden="true"></i>
+            <span class='expanded-element'>Team</span>
+          </a>
+        </li>
+		<li>
+          <a class='expandable' href='#' title='Logout'>
+           <i class="fa fa-power-off fa-lg" aria-hidden="true" ></i>
+            <span class='expanded-element'>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+	</body>
+	<script>
+	$('.name').on("change keyup paste",
+  function(){
+    if($(this).val()){
+      $('.icon-name').addClass("next");
+    } else {
+      $('.icon-name').removeClass("next");
+    }
+  }
+);
+
+
+
+$('.next-button.name').click(
+  function(){
+    console.log("Something");
+    $('.name-section').addClass("fold-up");
+    $('.roll-section').removeClass("folded");
+  }
+);
+$('.roll').on("change keyup paste",
+  function(){
+    if($(this).val()){
+      $('.icon-roll').addClass("next");
+    } else {
+      $('.icon-roll').removeClass("next");
+    }
+  }
+);
+
+$('.next-button').hover(
+  function(){
+    $(this).css('cursor', 'pointer');
+  }
+);
+
+$('.next-button.roll').click(
+  function(){
+    console.log("Something");
+    $('.roll-section').addClass("fold-up");
+    $('.college-section').removeClass("folded");
+  }
+);
+$('.college').on("change keyup paste",
+  function(){
+    if($(this).val()){
+      $('.icon-college').addClass("next");
+    } else {
+      $('.icon-college').removeClass("next");
+    }
+  }
+);
+
+$('.next-button').hover(
+  function(){
+    $(this).css('cursor', 'pointer');
+  }
+);
+
+$('.next-button.college').click(
+  function(){
+    console.log("Something");
+    $('.college-section').addClass("fold-up");
+    $('.uname-section').removeClass("folded");
+  }
+);
+$('.uname').on("change keyup paste",
+  function(){
+    if($(this).val()){
+      $('.icon-uname').addClass("next");
+    } else {
+      $('.icon-uname').removeClass("next");
+    }
+  }
+);
+
+$('.next-button').hover(
+  function(){
+    $(this).css('cursor', 'pointer');
+  }
+);
+
+$('.next-button.uname').click(
+  function(){
+    console.log("Something");
+    $('.uname-section').addClass("fold-up");
+    $('.email-section').removeClass("folded");
+  }
+);
+$('.email').on("change keyup paste",
+  function(){
+    if($(this).val()){
+      $('.icon-email').addClass("next");
+    } else {
+      $('.icon-email').removeClass("next");
+    }
+  }
+);
+
+$('.next-button').hover(
+  function(){
+    $(this).css('cursor', 'pointer');
+  }
+);
+
+$('.next-button.email').click(
+  function(){
+    console.log("Something");
+    $('.email-section').addClass("fold-up");
+    $('.password-section').removeClass("folded");
+  }
+);
+
+$('.password').on("change keyup paste",
+  function(){
+    if($(this).val()){
+      $('.icon-repeat-lock').addClass("next");
+    } else {
+      $('.icon-repeat-lock').removeClass("next");
+    }
+  }
+);
+
+$('.next-button.password').click(
+  function(){
+    console.log("Something");
+    $('.password-section').addClass("fold-up");
+    $('.success').css("marginTop", 0);
+  }
+);
+$(".next-button.password").click(
+function() {
+  $('.lo').toggleClass('loo');
+  $('.dp').toggleClass('dpp');
+});
+(function() {
+  $(function() {
+    var collapseMyMenu, expandMyMenu, hideMenuTexts, showMenuTexts;
+    expandMyMenu = function() {
+      return $("nav.sidebar").removeClass("sidebar-menu-collapsed").addClass("sidebar-menu-expanded");
+    };
+    collapseMyMenu = function() {
+      return $("nav.sidebar").removeClass("sidebar-menu-expanded").addClass("sidebar-menu-collapsed");
+    };
+    showMenuTexts = function() {
+      return $("nav.sidebar ul a span.expanded-element").show();
+    };
+    hideMenuTexts = function() {
+      return $("nav.sidebar ul a span.expanded-element").hide();
+    };
+    return $("#justify-icon").click(function(e) {
+      if ($(this).parent("nav.sidebar").hasClass("sidebar-menu-collapsed")) {
+        expandMyMenu();
+        showMenuTexts();
+        $(this).css({
+          color: "#000"
+        });
+      } else if ($(this).parent("nav.sidebar").hasClass("sidebar-menu-expanded")) {
+        collapseMyMenu();
+        hideMenuTexts();
+        $(this).css({
+          color: "#FFF"
+        });
+      }
+      return false;
+    });
+  });
+
+}).call(this);
+	</script>
+	</html>
